@@ -2,6 +2,7 @@ const React = require('react');
 const PropTypes = React.PropTypes
 const styles = require('../styles')
 const Link = require('react-router').Link
+const UserDetails = require('./UserDetails')
 
 
 function puke (object) {
@@ -16,11 +17,11 @@ const ConfirmBattle = props => {
     <div className='col-sm-8 col-sm-offset-2'>
       <div className='col-sm-6'>
         <p className='lead'>Player 1</p>
-        {puke(props.playersInfo[0])}
+        <UserDetails info={props.playersInfo[0]}/>
       </div>
       <div className='col-sm-6'>
         <p className='lead'>Player 2</p>
-        {puke(props.playersInfo[1])}
+          <UserDetails info={props.playersInfo[1]}/>
       </div>
     </div>
     <div className='col-sm-8 col-sm-offset-2'>
@@ -28,7 +29,9 @@ const ConfirmBattle = props => {
         <button type='button' className='btn btn-lg btn-success' onClick={props.onInitiateBattle}>INITIATE BATTLE!</button>
       </div>
       <div className='col-sm-12' style={styles.space}>
-        LINK TO /PLAYER ONE
+        <Link to='/playerOne'>
+          <button type='button' className='btn btn-lg btn-danger'>Reselect Players</button>
+        </Link>
       </div>
     </div>
   </div>

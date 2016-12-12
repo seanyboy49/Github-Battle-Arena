@@ -3,6 +3,7 @@ const PropTypes = React.PropTypes
 const styles = require('../styles')
 const Link = require('react-router').Link
 const UserDetails = require('./UserDetails')
+const UserDetailsWrapper = require('./UserDetailsWrapper')
 
 
 function puke (object) {
@@ -15,14 +16,12 @@ const ConfirmBattle = props => {
 : <div className='jumbotron col-sm-12 text-center' style={styles.transparentBG}>
     <h1>Confirm Players</h1>
     <div className='col-sm-8 col-sm-offset-2'>
-      <div className='col-sm-6'>
-        <p className='lead'>Player 1</p>
+      <UserDetailsWrapper header='Player One'>
         <UserDetails info={props.playersInfo[0]}/>
-      </div>
-      <div className='col-sm-6'>
-        <p className='lead'>Player 2</p>
-          <UserDetails info={props.playersInfo[1]}/>
-      </div>
+      </UserDetailsWrapper>
+      <UserDetailsWrapper header='Player Two'>
+        <UserDetails info={props.playersInfo[1]}/>
+      </UserDetailsWrapper>
     </div>
     <div className='col-sm-8 col-sm-offset-2'>
       <div className='col-sm-12' style={styles.space}>

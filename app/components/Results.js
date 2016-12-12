@@ -14,7 +14,7 @@ const puke = obj => {
 const Results = props => {
   if (props.isLoading === true) {
     return (
-      <p>LOADING</p>
+      <Loading />
     )
   }
   if(props.scores[0] === props.scores[1]) {

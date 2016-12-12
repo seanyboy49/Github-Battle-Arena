@@ -17,7 +17,7 @@ class ConfirmBattleContainer extends React.Component{
     githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
     .then(function(players) {
       that.setState({
-        isLoading: false,
+        isLoading: true,
         playersInfo: [players[0], players[1]]
       })
     })

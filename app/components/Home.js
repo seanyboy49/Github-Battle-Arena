@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactRouter = require('react-router');
 const { Link } = ReactRouter;
-const MainContainer = require(./MainContainer);
+const MainContainer = require('./MainContainer');
 
 class Home extends React.Component{
   render() {

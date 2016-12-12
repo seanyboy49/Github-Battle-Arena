@@ -5,6 +5,7 @@ const UserDetails = require('./UserDetails');
 const UserDetailsWrapper = require('./UserDetailsWrapper');
 const Link = require('react-router').Link;
 const MainContainer = require('./MainContainer');
+const Loading = require('./Loading');
 
 
 const puke = obj => {

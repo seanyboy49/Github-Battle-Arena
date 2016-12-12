@@ -1,10 +1,10 @@
 const React = require('react');
-const PropTypes = React.PropTypes
-const styles = require('../styles')
-const Link = require('react-router').Link
-const UserDetails = require('./UserDetails')
-const UserDetailsWrapper = require('./UserDetailsWrapper')
-
+const PropTypes = React.PropTypes;
+const styles = require('../styles');
+const Link = require('react-router').Link;
+const UserDetails = require('./UserDetails');
+const UserDetailsWrapper = require('./UserDetailsWrapper');
+const MainContainer = require('./MainContainer');
 
 function puke (object) {
   return <pre>{JSON.stringify(object, null, ' ')}</pre>
@@ -13,7 +13,7 @@ function puke (object) {
 const ConfirmBattle = props => {
   return props.isLoading === true
   ? <p> LOADING! </p>
-: <div className='jumbotron col-sm-12 text-center' style={styles.transparentBG}>
+: <MainContainer>
     <h1>Confirm Players</h1>
     <div className='col-sm-8 col-sm-offset-2'>
       <UserDetailsWrapper header='Player One'>
@@ -33,7 +33,7 @@ const ConfirmBattle = props => {
         </Link>
       </div>
     </div>
-  </div>
+  </MainContainer>
 }
 
 ConfirmBattle.propTypes = {

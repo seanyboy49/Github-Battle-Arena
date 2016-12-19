@@ -13,7 +13,7 @@ Thanks for checking out Github Battle Arena! It's a web app built with React tha
 ## Installing
 
 ```
-$ git clone https://github.com/seanyboy49/Viddy
+$ git clone https://github.com/seanyboy49/Github-Battle-Arena
 
 ```
 
